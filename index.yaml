@@ -3,7 +3,31 @@ entries:
   sample-chart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-10-27T16:33:45.423362-04:00"
+    created: "2023-10-30T10:05:15.725895-04:00"
+    description: A sample Helm chart for Kubernetes
+    digest: 1717ce86444ad47cdc7c1f6fcf0bad7b0cc17425e1e49c6fccc2b966764fe978
+    home: https://github.com/eyalabraham/helm-charts
+    icon: https://eyalabraham.github.io/helm-charts/icons/ibm-redhat.png
+    keywords:
+    - helm
+    - kubernetes
+    - openshift
+    maintainers:
+    - name: Eyal Abraham
+      url: https://www.ibm.com/products/storage-fusion
+    name: sample-chart
+    sources:
+    - https://helm.sh/
+    - https://docs.vmware.com/en/VMware-Application-Catalog/services/tutorials/GUID-create-first-helm-chart-index.html
+    - https://docs.openshift.com/container-platform/4.12/applications/working_with_helm_charts/configuring-custom-helm-chart-repositories.html
+    - https://medium.com/@mattiaperi/create-a-public-helm-chart-repository-with-github-pages-49b180dbb417
+    type: application
+    urls:
+    - https://eyalabraham.github.io/helm-charts/sample-chart-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-10-30T10:05:15.723918-04:00"
     description: A Helm chart for Kubernetes
     digest: 9feb21be4e9399e926fbf614b22718de86593198f0b26114e8bfe69a6ec38fda
     name: sample-chart
@@ -11,4 +35,4 @@ entries:
     urls:
     - https://eyalabraham.github.io/helm-charts/sample-chart-0.1.0.tgz
     version: 0.1.0
-generated: "2023-10-27T16:33:45.418375-04:00"
+generated: "2023-10-30T10:05:15.721228-04:00"

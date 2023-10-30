@@ -1,6 +1,6 @@
 apiVersion: v2
 name: sample-chart
-description: A Helm chart for Kubernetes
+description: A sample Helm chart for Kubernetes
 
 # A chart can be either an 'application' or a 'library' chart.
 #
@@ -12,10 +12,36 @@ description: A Helm chart for Kubernetes
 # pipeline. Library charts do not define any templates and therefore cannot be deployed.
 type: application
 
+# A list of keywords about this project (optional)
+keywords:
+  - helm
+  - kubernetes
+  - openshift
+
+# The URL of this projects home page (optional)
+home: https://github.com/eyalabraham/helm-charts
+
+# A list of URLs to source code for this project (optional)
+sources:
+  - https://helm.sh/
+  - https://docs.vmware.com/en/VMware-Application-Catalog/services/tutorials/GUID-create-first-helm-chart-index.html
+  - https://docs.openshift.com/container-platform/4.12/applications/working_with_helm_charts/configuring-custom-helm-chart-repositories.html
+  - https://medium.com/@mattiaperi/create-a-public-helm-chart-repository-with-github-pages-49b180dbb417
+
+# The maintainers name (required for each maintainer)(optional)
+# The maintainers email (optional for each maintainer)
+# A URL for the maintainer (optional for each maintainer)
+maintainers:
+  - name: Eyal Abraham
+    url: https://www.ibm.com/products/storage-fusion
+
+# A URL to an SVG or PNG image to be used as an icon (optional).
+icon: https://eyalabraham.github.io/helm-charts/icons/ibm-redhat.png
+
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
 # Versions are expected to follow Semantic Versioning (https://semver.org/)
-version: 0.1.0
+version: 0.2.0
 
 # This is the version number of the application being deployed. This version number should be
 # incremented each time you make changes to the application. Versions are not expected to
