@@ -1,0 +1,32 @@
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{ include "filebrowser.name" . }}-files
+  labels:
+    {{- include "filebrowser.labels" . | nindent 4 }}
+spec:
+  accessModes:
+    {{- range .Values.files.pvc.accessModes }}
+    - {{ . | quote }}
+    {{- end }}
+  storageClassName: {{ .Values.files.pvc.storageClassName }}
+  resources:
+    requests:
+      storage: {{ .Values.files.pvc.size | quote }}
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{ include "filebrowser.name" . }}-db
+  labels:
+    {{- include "filebrowser.labels" . | nindent 4 }}
+spec:
+  accessModes:
+    {{- range .Values.db.pvc.accessModes }}
+    - {{ . | quote }}
+    {{- end }}
+  storageClassName: {{ .Values.db.pvc.storageClassName }}
+  resources:
+    requests:
+      storage: {{ .Values.db.pvc.size | quote }}

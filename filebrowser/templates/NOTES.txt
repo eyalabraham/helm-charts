@@ -1,0 +1,1 @@
+To get the application URL, navigate to the OpenShift Administrator view > Networking > Routes, and then use the project name drop-down to select the project name (namespace) you created for this application. Search the list for the {{ include "filebrowser.name" . | quote }} route and click the URL that is displayed under the Location header.

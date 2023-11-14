@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "filebrowser.name" . }}
+  labels:
+    {{- include "filebrowser.labels" . | nindent 4 }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      {{- include "filebrowser.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        {{- include "filebrowser.selectorLabels" . | nindent 8 }}
+    spec: 
+      containers:
+      - name: {{ .Chart.Name}}
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
+        volumeMounts:
+          - name: filebrowser-config-file
+            mountPath: /.filebrowser.json
+            subPath: .filebrowser.json
+          - name: {{ include "filebrowser.name" . }}-files-vol
+            mountPath: {{ .Values.files.hostPath.path }}
+          - name: {{ include "filebrowser.name" . }}-db-vol
+            mountPath: {{ .Values.db.hostPath.path }}
+# Need these in order to comply with pod security un der OpenShift?
+#        securityContext:
+#          capabilities:
+#            drop:
+#              - ALL
+#          runAsNonRoot: true
+#          allowPrivilegeEscalation: false
+#
+#      securityContext:
+#        {{- toYaml .Values.securityContext | nindent 8 }}
+      volumes:
+        - name: filebrowser-config-file
+          configMap:
+            name: {{ include "filebrowser.name" . }}
+        - name: filebrowser-files-vol
+          persistentVolumeClaim:
+            claimName: {{ include "filebrowser.name" . }}-files
+        - name: filebrowser-db-vol
+          persistentVolumeClaim:
+            claimName: {{ include "filebrowser.name" . }}-db
