@@ -3,7 +3,32 @@ entries:
   filebrowser:
   - apiVersion: v2
     appVersion: "2.26"
-    created: "2023-11-14T16:46:45.062975-05:00"
+    created: "2024-01-19T14:46:07.116609-05:00"
+    description: Deploy filebrowser application.
+    digest: aae28da6419332bd90ff6c0867456fdccedf3c124537767f3f7de9c1c44e13cb
+    home: https://filebrowser.org/
+    icon: https://eyalabraham.github.io/helm-charts/icons/filebrowser.png
+    keywords:
+    - helm
+    - kubernetes
+    - openshift
+    - filebrowser
+    maintainers:
+    - name: Eyal Abraham
+      url: https://github.com/eyalabraham/helm-charts
+    name: filebrowser
+    sources:
+    - https://helm.sh/
+    - https://docs.vmware.com/en/VMware-Application-Catalog/services/tutorials/GUID-create-first-helm-chart-index.html
+    - https://docs.openshift.com/container-platform/4.12/applications/working_with_helm_charts/configuring-custom-helm-chart-repositories.html
+    - https://medium.com/@mattiaperi/create-a-public-helm-chart-repository-with-github-pages-49b180dbb417
+    type: application
+    urls:
+    - https://eyalabraham.github.io/helm-charts/filebrowser-0.3.0.tgz
+    version: 0.3.0
+  - apiVersion: v2
+    appVersion: "2.26"
+    created: "2024-01-19T14:46:07.116102-05:00"
     description: Deploy filebrowser application.
     digest: 82c2a8305a01565ffb1d26889c5389583b7803ee9ee3bdbb92db40393c137144
     home: https://filebrowser.org/
@@ -28,7 +53,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: "2.26"
-    created: "2023-11-14T16:46:45.061864-05:00"
+    created: "2024-01-19T14:46:07.114782-05:00"
     description: Deploy filebrowser application.
     digest: d05259b465f2ef6166a431a3276a816a9d5b1a90947975db9cc81a08d30990b6
     home: https://filebrowser.org/
@@ -54,7 +79,7 @@ entries:
   sample-chart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-11-14T16:46:45.065828-05:00"
+    created: "2024-01-19T14:46:07.118907-05:00"
     description: A sample Helm chart for Kubernetes
     digest: 1717ce86444ad47cdc7c1f6fcf0bad7b0cc17425e1e49c6fccc2b966764fe978
     home: https://github.com/eyalabraham/helm-charts
@@ -78,7 +103,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-11-14T16:46:45.064212-05:00"
+    created: "2024-01-19T14:46:07.11762-05:00"
     description: A Helm chart for Kubernetes
     digest: 9feb21be4e9399e926fbf614b22718de86593198f0b26114e8bfe69a6ec38fda
     name: sample-chart
@@ -86,4 +111,4 @@ entries:
     urls:
     - https://eyalabraham.github.io/helm-charts/sample-chart-0.1.0.tgz
     version: 0.1.0
-generated: "2023-11-14T16:46:45.060329-05:00"
+generated: "2024-01-19T14:46:07.112923-05:00"
