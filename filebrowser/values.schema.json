@@ -27,7 +27,7 @@
                 "type": "string",
                 "title": "Storage class",
                 "description": "Change if you do not have Data Foundation installed!",
-                "pattern": "^[a-z0-9-_]+$",
+                "pattern": "^[a-z0-9-]+$",
                 "default": "ocs-storagecluster-cephfs"
               },
               "size": {
@@ -59,7 +59,7 @@
                 "type": "string",
                 "title": "Storage class",
                 "description": "Change if you do not have Data Foundation installed!",
-                "pattern": "^[a-z0-9-_]+$",
+                "pattern": "^[a-z0-9-]+$",
                 "default": "ocs-storagecluster-cephfs"
               },
               "size": {
