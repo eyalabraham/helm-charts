@@ -1,0 +1,77 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "title": "Aplication storage.",
+    "description": "Define storage class and capacity for the 'filebrowser' application elements.",
+    "type": "object",
+    "required": [
+      "files",
+      "db"
+    ],
+    "properties": {
+      "files": {
+        "title": "File storage space",
+        "type": "object",
+        "required": [
+          "pvc"
+        ],
+        "properties": {
+          "pvc": {
+            "title": "PVC parameters",
+            "type": "object",
+            "required": [
+              "storageClassName",
+              "size"
+            ],
+            "properties": {
+              "storageClassName": {
+                "type": "string",
+                "title": "Storage class",
+                "description": "Change if you do not have Data Foundation installed!",
+                "pattern": "^[a-z0-9-_]+$",
+                "default": "ocs-storagecluster-cephfs"
+              },
+              "size": {
+                "type": "string",
+                "title": "Capacity",
+                "pattern": "^[0-9]+[GM][i]$",
+                "default": "10Gi"
+              }
+            }
+          }
+        }
+      },
+      "db": {
+        "title": "Internal application database storage space",
+        "type": "object",
+        "required": [
+          "pvc"
+        ],
+        "properties": {
+          "pvc": {
+            "title": "PVC parameters",
+            "type": "object",
+            "required": [
+              "storageClassName",
+              "size"
+            ],
+            "properties": {
+              "storageClassName": {
+                "type": "string",
+                "title": "Storage class",
+                "description": "Change if you do not have Data Foundation installed!",
+                "pattern": "^[a-z0-9-_]+$",
+                "default": "ocs-storagecluster-cephfs"
+              },
+              "size": {
+                "type": "string",
+                "title": "Capacity",
+                "description": "Leave default unless very large file count is expected.",
+                "pattern": "^[0-9]+[GM][i]$",
+                "default": "1Gi"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
