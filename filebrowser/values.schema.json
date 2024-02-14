@@ -1,7 +1,5 @@
 {
     "$schema": "http://json-schema.org/schema#",
-    "title": "Aplication storage.",
-    "description": "Define storage class and capacity for the 'filebrowser' application elements.",
     "type": "object",
     "required": [
       "files",
@@ -9,14 +7,12 @@
     ],
     "properties": {
       "files": {
-        "title": "File storage space",
         "type": "object",
         "required": [
           "pvc"
         ],
         "properties": {
           "pvc": {
-            "title": "PVC parameters",
             "type": "object",
             "required": [
               "storageClassName",
@@ -25,14 +21,14 @@
             "properties": {
               "storageClassName": {
                 "type": "string",
-                "title": "Storage class",
+                "title": "Storage class for file storage",
                 "description": "Change if you do not have Data Foundation installed!",
                 "pattern": "^[a-z0-9-]+$",
                 "default": "ocs-storagecluster-cephfs"
               },
               "size": {
                 "type": "string",
-                "title": "Capacity",
+                "title": "Storage space for files",
                 "pattern": "^[0-9]+[GM][i]$",
                 "default": "10Gi"
               }
@@ -41,14 +37,12 @@
         }
       },
       "db": {
-        "title": "Internal application database storage space",
         "type": "object",
         "required": [
           "pvc"
         ],
         "properties": {
           "pvc": {
-            "title": "PVC parameters",
             "type": "object",
             "required": [
               "storageClassName",
@@ -57,14 +51,14 @@
             "properties": {
               "storageClassName": {
                 "type": "string",
-                "title": "Storage class",
+                "title": "Storage class for internal application database",
                 "description": "Change if you do not have Data Foundation installed!",
                 "pattern": "^[a-z0-9-]+$",
                 "default": "ocs-storagecluster-cephfs"
               },
               "size": {
                 "type": "string",
-                "title": "Capacity",
+                "title": "Storage space for internal application database",
                 "description": "Leave default unless very large file count is expected.",
                 "pattern": "^[0-9]+[GM][i]$",
                 "default": "1Gi"
