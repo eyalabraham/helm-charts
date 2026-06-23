@@ -3,7 +3,7 @@ entries:
   filebrowser:
   - apiVersion: v2
     appVersion: "2.26"
-    created: "2026-06-23T11:30:54.700642-04:00"
+    created: "2026-06-23T13:14:49.613899-04:00"
     description: Deploy filebrowser application.
     digest: 4565f35028d48e3cf147a0a2c163562e0ba706066bb5f122a1886b94d5a863de
     home: https://filebrowser.org/
@@ -28,7 +28,7 @@ entries:
     version: 0.3.3
   - apiVersion: v2
     appVersion: "2.26"
-    created: "2026-06-23T11:30:54.70006-04:00"
+    created: "2026-06-23T13:14:49.613622-04:00"
     description: Deploy filebrowser application.
     digest: fb2357c38478f9bf30766b2bb627e3d0dd8681e0e9cc57493262fea0322961bc
     home: https://filebrowser.org/
@@ -53,7 +53,7 @@ entries:
     version: 0.3.2
   - apiVersion: v2
     appVersion: "2.26"
-    created: "2026-06-23T11:30:54.699608-04:00"
+    created: "2026-06-23T13:14:49.613303-04:00"
     description: Deploy filebrowser application.
     digest: 6ea2402f94600d8a50e4a29abe0f0a2695362ef8dbbd4f7735474c212a418f96
     home: https://filebrowser.org/
@@ -78,7 +78,7 @@ entries:
     version: 0.3.1
   - apiVersion: v2
     appVersion: "2.26"
-    created: "2026-06-23T11:30:54.699313-04:00"
+    created: "2026-06-23T13:14:49.611861-04:00"
     description: Deploy filebrowser application.
     digest: aae28da6419332bd90ff6c0867456fdccedf3c124537767f3f7de9c1c44e13cb
     home: https://filebrowser.org/
@@ -103,7 +103,7 @@ entries:
     version: 0.3.0
   - apiVersion: v2
     appVersion: "2.26"
-    created: "2026-06-23T11:30:54.698662-04:00"
+    created: "2026-06-23T13:14:49.611488-04:00"
     description: Deploy filebrowser application.
     digest: 82c2a8305a01565ffb1d26889c5389583b7803ee9ee3bdbb92db40393c137144
     home: https://filebrowser.org/
@@ -128,7 +128,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: "2.26"
-    created: "2026-06-23T11:30:54.698218-04:00"
+    created: "2026-06-23T13:14:49.611052-04:00"
     description: Deploy filebrowser application.
     digest: d05259b465f2ef6166a431a3276a816a9d5b1a90947975db9cc81a08d30990b6
     home: https://filebrowser.org/
@@ -154,7 +154,7 @@ entries:
   sample-chart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2026-06-23T11:30:54.701302-04:00"
+    created: "2026-06-23T13:14:49.614512-04:00"
     description: A sample Helm chart for Kubernetes
     digest: 1717ce86444ad47cdc7c1f6fcf0bad7b0cc17425e1e49c6fccc2b966764fe978
     home: https://github.com/eyalabraham/helm-charts
@@ -178,7 +178,7 @@ entries:
     version: 0.2.0
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2026-06-23T11:30:54.70092-04:00"
+    created: "2026-06-23T13:14:49.614155-04:00"
     description: A Helm chart for Kubernetes
     digest: 9feb21be4e9399e926fbf614b22718de86593198f0b26114e8bfe69a6ec38fda
     name: sample-chart
@@ -188,10 +188,10 @@ entries:
     version: 0.1.0
   wordpress:
   - apiVersion: v2
-    appVersion: 4.8.23
-    created: "2026-06-23T11:30:54.701555-04:00"
+    appVersion: 4.8-apache
+    created: "2026-06-23T13:14:49.614753-04:00"
     description: Deploy WordPress application.
-    digest: cf7a861e7c40d072a70588623591de0e6e9f1c15f4d5943a8424a99cf2d0fd89
+    digest: 9b9d26bf96be396c21e5c6ea073ef7a00c7ffdf8cd868970f4224c001d574cac
     home: https://wordpress.com/
     icon: https://eyalabraham.github.io/helm-charts/icons/wordpress.png
     keywords:
@@ -213,4 +213,4 @@ entries:
     urls:
     - https://eyalabraham.github.io/helm-charts/wordpress-0.1.0.tgz
     version: 0.1.0
-generated: "2026-06-23T11:30:54.697444-04:00"
+generated: "2026-06-23T13:14:49.609834-04:00"
