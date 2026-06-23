@@ -1,0 +1,77 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "type": "object",
+    "required": [
+      "wordpress",
+      "mysql"
+    ],
+    "properties": {
+      "wordpress": {
+        "type": "object",
+        "required": [
+          "pvc"
+        ],
+        "properties": {
+          "pvc": {
+            "type": "object",
+            "required": [
+              "storageClassName",
+              "size"
+            ],
+            "properties": {
+              "storageClassName": {
+                "type": "string",
+                "title": "Storage class for WordPress files",
+                "description": "Change if you do not have Data Foundation installed!",
+                "pattern": "^[a-z0-9-]+$",
+                "default": "ocs-storagecluster-ceph-rbd"
+              },
+              "size": {
+                "type": "string",
+                "title": "Storage space for WordPress files",
+                "pattern": "^[0-9]+[GM][i]$",
+                "default": "1Gi"
+              }
+            }
+          }
+        }
+      },
+      "mysql": {
+        "type": "object",
+        "required": [
+          "pvc",
+          "password"
+        ],
+        "properties": {
+          "password": {
+            "type": "string",
+            "title": "MySQL root password",
+            "description": "Password for MySQL database root user",
+            "default": "password"
+          },
+          "pvc": {
+            "type": "object",
+            "required": [
+              "storageClassName",
+              "size"
+            ],
+            "properties": {
+              "storageClassName": {
+                "type": "string",
+                "title": "Storage class for MySQL database",
+                "description": "Change if you do not have Data Foundation installed!",
+                "pattern": "^[a-z0-9-]+$",
+                "default": "ocs-storagecluster-ceph-rbd"
+              },
+              "size": {
+                "type": "string",
+                "title": "Storage space for MySQL database",
+                "pattern": "^[0-9]+[GM][i]$",
+                "default": "1Gi"
+              }
+            }
+          }
+        }
+      }
+    }
+  }

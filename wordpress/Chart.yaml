@@ -1,0 +1,52 @@
+apiVersion: v2
+name: wordpress
+description: Deploy WordPress application.
+
+# A chart can be either an 'application' or a 'library' chart.
+#
+# Application charts are a collection of templates that can be packaged into versioned archives
+# to be deployed.
+#
+# Library charts provide useful utilities or functions for the chart developer. They're included as
+# a dependency of application charts to inject those utilities and functions into the rendering
+# pipeline. Library charts do not define any templates and therefore cannot be deployed.
+type: application
+
+# A list of keywords about this project (optional)
+keywords:
+  - helm
+  - kubernetes
+  - openshift
+  - wordpress
+  - sql
+
+# The URL of this projects home page (optional)
+home: https://wordpress.com/
+
+# A list of URLs to source code for this project (optional)
+sources:
+  - https://helm.sh/
+  - https://docs.vmware.com/en/VMware-Application-Catalog/services/tutorials/GUID-create-first-helm-chart-index.html
+  - https://docs.openshift.com/container-platform/4.12/applications/working_with_helm_charts/configuring-custom-helm-chart-repositories.html
+  - https://medium.com/@mattiaperi/create-a-public-helm-chart-repository-with-github-pages-49b180dbb417
+
+# The maintainers name (required for each maintainer)(optional)
+# The maintainers email (optional for each maintainer)
+# A URL for the maintainer (optional for each maintainer)
+maintainers:
+  - name: Eyal Abraham
+    url: https://github.com/eyalabraham/helm-charts
+
+# A URL to an SVG or PNG image to be used as an icon (optional).
+icon: https://eyalabraham.github.io/helm-charts/icons/wordpress.png
+
+# This is the chart version. This version number should be incremented each time you make changes
+# to the chart and its templates, including the app version.
+# Versions are expected to follow Semantic Versioning (https://semver.org/)
+version: 0.1.0
+
+# This is the version number of the application being deployed. This version number should be
+# incremented each time you make changes to the application. Versions are not expected to
+# follow Semantic Versioning. They should reflect the version the application is using.
+# It is recommended to use it with quotes.
+appVersion: "4.8.23"

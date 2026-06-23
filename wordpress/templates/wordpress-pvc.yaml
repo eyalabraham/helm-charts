@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{ include "wordpress.name" . }}
+  labels:
+    {{- include "wordpress.labels" . | nindent 4 }}
+spec:
+  storageClassName: {{ .Values.wordpress.pvc.storageClassName }}
+  accessModes:
+    {{- toYaml .Values.wordpress.pvc.accessModes | nindent 4 }}
+  resources:
+    requests:
+      storage: {{ .Values.wordpress.pvc.size }}
+
+# Made with Bob
